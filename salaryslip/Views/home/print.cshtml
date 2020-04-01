@@ -1,0 +1,63 @@
+﻿@model salaryslip.Models.salary
+@{
+    ViewBag.Title = "print";
+}
+<div style="background-color: #42f5ec; height: 200%; width: 100%;">
+<span style="font-size:25px">@Html.ActionLink("back to home","","Home")</span>
+<h2 style="text-align: center; font-size: 60px;position:relative;top:20px;"><span style="border-bottom:3px solid black;">Print Details</span></h2>
+
+@using (Html.BeginForm())
+{
+    <span style="position: relative; right: -550px; top: 20px; font-size: 30px">
+        <p>
+            <b>Persons id:</b>
+            @Html.DisplayTextFor(s => s.id)
+        </p>
+        <p>
+            <b>Person Name:</b>
+            @Html.DisplayTextFor(s => s.name)
+        </p>
+         <p>
+            <b>Employer Id:</b>
+            @Html.DisplayTextFor(s => s.employerid)
+        </p>
+        <p>
+            <b>Person Title:</b>
+            @Html.DisplayTextFor(s => s.title)
+        </p>
+        <p>
+            <b>Person Department:</b>
+            @Html.DisplayTextFor(s => s.depart)
+        </p>
+        <p>
+            <b>Account Number:</b>
+            @Html.DisplayTextFor(s => s.accno)
+        </p>
+        <p>
+            <b>Basic Salary:</b>
+            @Html.DisplayTextFor(s => s.basicsalary)
+        </p>
+        <p>
+            <b>Meal Allowance:</b>
+            @Html.DisplayTextFor(s => s.mealallow)
+        </p>
+        <p>
+            <b>Transport Allowance:</b>
+            @Html.DisplayTextFor(s => s.transportallow)
+        </p>
+        <p>
+            <b>Medical Allowance:</b>
+            @Html.DisplayTextFor(s => s.medicalallow)
+        </p>
+        <p>
+            <b>Tax Deduction:</b>
+            @Html.DisplayTextFor(s => s.tax)
+        </p>
+        <p>
+            <b>Total Salary:</b>
+        @Html.DisplayTextFor(s =>s.basicsalary)+@Html.DisplayTextFor(s => s.mealallow)+@Html.DisplayTextFor(s => s.transportallow)+@Html.DisplayTextFor(s => s.medicalallow)-@Html.DisplayTextFor(s => s.tax)  = <b> Rs:@Html.DisplayTextFor(s => s.total)/-</b>
+        </p>
+         </span>
+
+}
+    </div>

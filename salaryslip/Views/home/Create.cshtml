@@ -1,0 +1,84 @@
+﻿@model salaryslip.Models.salary
+@{
+    ViewBag.Title = "Create";
+}
+<div style="background-color: #42f5ec; height: 100%; width: 100%;">
+<span style="font-size:25px">@Html.ActionLink("back to home","","Home")</span>
+<h2 style="text-align: center; font-size: 50px;position:relative;top:100px">Add Student Page</h2>
+
+
+
+
+@using (Html.BeginForm())
+{ 
+    <table style="position: relative; right: -650px; top: 100px">
+        <tr>
+            <td>Name : </td>
+            <td>@Html.TextBoxFor(c => c.name)</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td>Employer Id : </td>
+            <td>@Html.TextBoxFor(c => c.employerid)</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td>Title : </td>
+            <td>@Html.TextBoxFor(c => c.title)</td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td>Department : </td>
+            <td>@Html.TextBoxFor(c => c.depart)</td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td>Account Number : </td>
+            <td>@Html.TextBoxFor(c => c.accno)</td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td>Basic Salary : </td>
+            <td>@Html.TextBoxFor(c => c.basicsalary)</td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td>Meal Allowance : </td>
+            <td>@Html.TextBoxFor(c => c.mealallow)</td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td>Transport Allowance : </td>
+            <td>@Html.TextBoxFor(c => c.transportallow)</td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td>Medical Allowance : </td>
+            <td>@Html.TextBoxFor(c => c.medicalallow)</td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td>Tax : </td>
+            <td>@Html.TextBoxFor(c => c.tax)</td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+
+        <tr></tr>
+        <tr></tr>
+               <tr>
+                       <td style=" margin-top: 10px;" colspan="2">
+                <input type="submit" value="Update" style=" width:460px;background-color: blue; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" />
+            </td>
+        </tr>
+
+    </table>
+}
+    </div>

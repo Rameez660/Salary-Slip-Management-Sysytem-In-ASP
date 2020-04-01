@@ -1,0 +1,131 @@
+﻿@model List<salaryslip.Models.salary>
+@{
+    ViewBag.Title = "Index";
+}
+<div style="background-color:#42f5ec;height:100%;width:100%">
+<h2 style="text-align:center;font-size:50px;position:relative;top:20px">Salary slip List</h2>
+<span style="position:relative;right:-710px;font-size:30px;">@Html.ActionLink("NEW ENTRY","Create","Home")</span>
+<span style="position:relative;right:-1230px;font-size:30px;">@Html.ActionLink("login","login","Home")</span>
+<span style="position:relative;right:-1250px;font-size:30px;">@Html.ActionLink("logout","login","Home")</span>
+    <hr />
+
+<table style="position:relative;right:-2px">
+    <tr style="font-size: 20px;">
+
+        <th style="padding: 1px;padding-bottom:20px; border-right: 2px solid black;border-bottom: 2px solid black">Person ID</th>
+        <td></td>
+        <th style="padding: 1px;padding-bottom:20px;  border-right: 2px solid black;border-bottom: 2px solid black">Person Name</th>
+        <td></td>
+        <th style="padding: 1px; padding-bottom:20px; border-right: 2px solid black;border-bottom: 2px solid black">Employer id</th>
+        <td></td>
+        <th style="padding: 1px; padding-bottom:20px; border-right: 2px solid black;border-bottom: 2px solid black">Title</th>
+        <td></td>
+        <th style="padding: 1px; padding-bottom:20px; border-right: 2px solid black;border-bottom: 2px solid black">Department</th>
+        <td></td>
+        <th style="padding: 1px; padding-bottom:20px; border-right: 2px solid black;border-bottom: 2px solid black">Account Number</th>
+        <td></td>
+        <th style="padding: 1px;padding-bottom:20px;  border-right: 2px solid black;border-bottom: 2px solid black">Basic Salary</th>
+        <td></td>
+        <th style="padding: 1px;padding-bottom:20px;  border-right: 2px solid black;border-bottom: 2px solid black">Meal Allowance</th>
+        <td></td>
+        <th style="padding: 1px;padding-bottom:20px;  border-right: 2px solid black;border-bottom: 2px solid black">Transport Allowance</th>
+        <td></td>
+        <th style="padding: 1px;padding-bottom:20px;  border-right: 2px solid black;border-bottom: 2px solid black">Medical Allowance</th>
+        <td></td>
+        <th style="padding: 1px; padding-bottom:20px; border-right: 2px solid black;border-bottom: 2px solid black">Tax</th>
+        <td></td>
+        <th style="padding: 1px;padding-bottom:20px;  border-right: 2px solid black;border-bottom: 2px solid black">Total</th>
+
+
+    </tr>
+
+@foreach (var stud in Model)
+{
+    <tr>
+        <td style="padding: 1px; text-align: center; border-right: 1px solid black">
+            @stud.id
+        </td>
+        <td></td>
+
+        <td style="padding: 1px; border-right: 1px solid black">
+            @stud.name
+        </td>
+        <td></td>
+
+        <td style="padding: 1px; border-right: 1px solid black">
+            @stud.employerid
+        </td>
+        <td></td>
+
+        <td style="padding: 1px; text-align: center; border-right: 1px solid black">
+            @stud.title
+        </td>
+        <td></td>
+        <td style="padding: 1px; text-align: center; border-right: 1px solid black">
+            @stud.depart
+        </td>
+        <td></td>
+        <td style="padding: 1px; text-align: center; border-right: 1px solid black">
+            @stud.accno
+        </td>
+        <td></td>
+        <td style="padding: 1px; text-align: center; border-right: 1px solid black">
+        @stud.basicsalary
+        </td>
+        <td></td>
+        <td style="padding: 1px; text-align: center; border-right: 1px solid black">
+            @stud.mealallow
+        </td>
+        <td></td>
+        <td style="padding: 1px; text-align: center; border-right: 1px solid black">
+            @stud.transportallow
+        </td>
+        <td></td>
+        <td style="padding: 1px; text-align: center; border-right: 1px solid black">
+            @stud.medicalallow
+        </td>
+        <td></td>
+        <td style="padding: 10px; text-align: center; border-right: 1px solid black">
+            @stud.tax
+        </td>
+        <td></td>
+                <td style="padding:1px;text-align:center;border-right:1px solid black">
+           @stud.total
+        </td>
+        <td></td>
+
+              <td style="padding:10px;">
+            @Html.ActionLink("Print", "print", "Home", new { id=@stud.id},null)
+        </td>
+        <td></td>
+             
+          <td style="padding:10px;">
+            @Html.ActionLink("Update", "Update", "Home", new { id=@stud.id},null)
+        </td>
+        <td></td>
+         <td style="padding:10px;">
+            @Html.ActionLink("Delete", "Delete", "Home", new { id=@stud.id},null)
+        </td>
+    </tr>
+    
+}
+    </table> 
+</div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+

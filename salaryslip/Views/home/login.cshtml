@@ -1,0 +1,33 @@
+﻿@model salaryslip.Models.salary
+
+@{
+    ViewBag.Title = "login";
+}
+<div style="background-color: #42f5ec; height: 100%; width: 100%;">
+    <h2 style="text-align: center; font-size: 50px;position:relative;top:100px">Login Page</h2>
+    <p style="color: blue">
+        @Html.ValidationSummary()
+    </p>
+
+
+
+    @using (Html.BeginForm())
+    { 
+        <table style="position:relative;right:-650px;top:100px">
+            <tr>
+                <td>name : </td>
+                <td>@Html.TextBoxFor(l => l.username)</td>
+            </tr>
+            <tr>
+                <td>password : </td>
+                <td>@Html.TextBoxFor(l => l.password)</td>
+            </tr>
+            <tr>
+            <td style=" margin-top: 10px;" colspan="2">
+                <input type="submit" value="Update" style=" width:245px;;background-color: blue; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" />
+            </td>
+            </tr>
+
+        </table>
+}
+</div>

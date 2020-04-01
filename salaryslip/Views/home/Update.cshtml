@@ -1,0 +1,105 @@
+﻿@model salaryslip.Models.salary
+@{
+    ViewBag.Title = "Update";
+}
+<div style="background-color: #42f5ec; height: 150%; width: 100%;">
+<span style="font-size:25px">@Html.ActionLink("back to home","","Home")</span>
+<h2 style="text-align: center; font-size: 60px;position:relative;top:10px;"><span style="border-bottom:3px solid black;">Update Student Details</span></h2>
+@using (Html.BeginForm())
+{
+    <table style="position:relative;right:-550px;top:10px;font-size:30px">
+
+        <tr>
+            <td><b>Person id:</b>
+            </td>
+            <td>
+                @Html.TextBoxFor(s => s.id, new { @readonly = true })
+            </td>
+        </tr>
+        <tr>
+            <td><b>Person Name:</b>
+            </td>
+            <td>
+                @Html.TextBoxFor(s => s.name)
+            </td>
+        </tr>
+                <tr>
+            <td><b>Employer Id</b>
+            </td>
+            <td>
+                @Html.TextBoxFor(s => s.employerid)
+            </td>
+        </tr>
+        <tr>
+            <td><b>Person Title:</b>
+            </td>
+            <td>
+            @Html.TextBoxFor(s => s.title)
+
+            </td>
+        </tr>
+        <tr>
+            <td> <b>Person Department:</b>
+            </td>
+            <td>
+              
+            @Html.TextBoxFor(s => s.depart)</td>
+        </tr>
+                <tr>
+            <td> <b>Account Number:</b>
+            </td>
+            <td>
+              
+             
+            @Html.TextBoxFor(s => s.accno)</td>
+        </tr>        <tr>
+            <td>       <b>Basic Salary:</b>
+            </td>
+            <td>
+    
+            @Html.TextBoxFor(s => s.basicsalary)</td>
+        </tr>        <tr>
+            <td>     
+            <b>Meal Allowance:</b>
+            </td>
+            <td>
+              
+     
+            @Html.TextBoxFor(s => s.mealallow)</td>
+        </tr>        <tr>
+            <td>   <b>Transport Allowance:</b>
+            </td>
+            <td>
+              
+      
+            @Html.TextBoxFor(s => s.transportallow)</td>
+        </tr>        <tr>
+            <td>     <b>Medical Allowance:</b>
+            </td>
+            <td>
+              
+         
+        
+            @Html.TextBoxFor(s => s.medicalallow)</td>
+        </tr>        <tr>
+            <td>    <b>Tax Deduction:</b>
+            </td>
+            <td>
+              
+       
+            @Html.TextBoxFor(s => s.tax)</td>
+        </tr>       
+
+        <tr>
+            <td style=" margin-top: 10px;" colspan="2">
+                <input type="submit" value="Update" style=" width:460px;;background-color: blue; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" />
+            </td>
+        </tr>
+           
+    </table>
+}
+    </div>
+
+
+    
+        
